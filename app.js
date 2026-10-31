@@ -133,3 +133,42 @@ studyGroup.members.forEach((member) => {
     }
 })
 console.log(`completed homework: ${completedCount}`)
+console.log('------------------exercise 10------------------')
+function calculateTotal(itemPrice){
+   let localTotal=0
+   for (let i=0; i < itemPrice.length; i++){
+localTotal+=itemPrice[i]
+
+   }
+return localTotal
+
+}
+console.log(calculateTotal([2, 5, 3])); // 10
+console.log(calculateTotal([4, 4]));    // 8
+console.log(calculateTotal([7]));       // 7
+console.log(calculateTotal([]));        // 0
+console.log('------------------exercise 11------------------')
+const bill = {
+  customerName: 'Noor',
+  items: [
+    { name: 'Tea', price: 2, quantity: 2 },
+    { name: 'Sandwich', price: 4, quantity: 1 },
+    { name: 'Cookie', price: 1, quantity: 3 },
+  ],
+};
+ bill.getTotal =function (){
+    let lTotal=0
+    for(let i=0; i< bill.items.length; i++){
+        lTotal+=bill.items[i].price*bill.items[i].quantity
+
+    }
+    return lTotal
+}
+console.log(bill.getTotal()); 
+bill.items.push({
+  name: 'Water',
+  price: 1,
+  quantity: 2,
+});
+
+console.log(bill.getTotal()); // 13
